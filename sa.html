@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>هدية رقمية - ساري</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #fff);
+  color: #333;
+  direction: rtl;
+  text-align: center;
+}
+h1 { color: #d6336c; margin-top: 40px; }
+p { font-size: 18px; line-height: 1.6; }
+.button {
+  background-color: #d6336c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: transform 0.2s;
+}
+.button:hover { transform: scale(1.05); }
+.gift {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.gift.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.date {
+  font-size: 24px;
+  color: #d6336c;
+  margin: 20px 0;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.secretInput {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d6336c;
+  margin-top: 10px;
+  width: 60%;
+  font-size: 16px;
+}
+</style>
+</head>
+<body>
+
+<h1>ساري💖</h1>
+<p>البعيد عن عيني لكن الاقرب الى قلبي 💝</p>
+
+
+
+<button class="button" onclick="openGift()">افتح هديتك 💝</button>
+
+<!-- الهديّة الأولى -->
+<div id="giftMessage" class="gift">
+  <p> كل عام وانت حبي الاول والاخير 💖</p>
+  <p>I love you so much 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>هدية رقمية - ساري</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #fff);
+  color: #333;
+  direction: rtl;
+  text-align: center;
+}
+h1 { color: #d6336c; margin-top: 40px; }
+p { font-size: 18px; line-height: 1.6; }
+.button {
+  background-color: #d6336c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: transform 0.2s;
+}
+.button:hover { transform: scale(1.05); }
+.gift {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.gift.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.date {
+  font-size: 24px;
+  color: #d6336c;
+  margin: 20px 0;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.secretInput {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d6336c;
+  margin-top: 10px;
+  width: 60%;
+  font-size: 16px;
+}
+</style>
+</head>
+<body>
+
+<h1>My love, sari🫦💖</h1>
+
+
+<!-- التاريخ -->
+<div class="date">🌸 14 February 🌸</div>
+
+<button class="button" onclick="openGift()">افتح هديتك 💝</button>
+
+<!-- الهديّة الأولى -->
+<div id="giftMessage" class="gift">
+  <p>كل عام وانت حبي الاول والاخير  💖</p>
+  <p>I love you so much 💝</p>
+</div>
+
+<!-- القسم السري (يظهر بعد فتح الهديّة الأولى) -->
+<div id="secretSection" class="gift" style="display:none;">
+  <h2>هدية ثانية 💌</h2>
+  <p>أدخل كلمة السر لتفتح هذه الهدية:</p>
+  <input type="text" id="secretInput" class="secretInput" placeholder="كلمة السر">
+  <button class="button" onclick="checkSecret()">افتح الهدية</button>
+
+  <div id="secretGift" class="gift">
+    <p>يا مهندس قلبي💖</p>
+    <p>احبك احبكككككك احبككككككككككك 💝</p>
+    <p>يارب اشوفك خريج ياروحي وقتها بجيب لك الهدية اللي تستحقها 💕💝</p>
+    <p>واسف انه صغير كذا هذا اللي اقدر عليه 🥲🤍</p>
+  </div>
+</div>
+
+<script>
+function openGift() {
+  document.getElementById("giftMessage").classList.add("show");
+  // إظهار القسم السري بعد فتح الهديّة الأولى
+  setTimeout(() => {
+    document.getElementById("secretSection").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("secretSection").classList.add("show");
+    }, 50);
+  }, 600);
+}
+
+function checkSecret() {
+  const input = document.getElementById("secretInput").value.trim().toLowerCase();
+  if(input === "حب") { // كلمة السر للهديّة الثانية
+    document.getElementById("secretGift").classList.add("show");
+  } else {
+    alert("كلمة السر غير صحيحة! حاول مرة ثانية 💖");
+  }
+}
+</script>
+
+</body>
+</html>
+</p>
+</div>
+
+<!-- القسم السري (يظهر بعد فتح الهديّة الأولى) -->
+<div id="secretSection" class="gift" style="display:none;">
+  <h2>هدية ثانية 💌</h2>
+  <p>أدخل كلمة السر لتفتح هذه الهدية:</p>
+  <input type="text" id="secretInput" class="secretInput" placeholder="كلمة السر">
+  <button class="button" onclick="checkSecret()">افتح الهدية</button>
+
+  <div id="secretGift" class="gift">
+    <p>يا ساري، هذه مفاجأة صغيرة لك 💖</p>
+    <p>كل لحظة معك أغلى شيء بحياتي… أحبك يا قلبي 💝</p>
+  </div>
+</div>
+
+<script>
+function openGift() {
+  document.getElementById("giftMessage").classList.add("show");
+  // إظهار القسم السري بعد فتح الهديّة الأولى
+  setTimeout(() => {
+    document.getElementById("secretSection").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("secretSection").classList.add("show");
+    }, 50);
+  }, 600);
+}
+
+function checkSecret() {
+  const input = document.getElementById("secretInput").value.trim().toLowerCase();
+  if(input === "حب") { // كلمة السر للهديّة الثانية
+    document.getElementById("secretGift").classList.add("show");
+  } else {
+    alert("كلمة السر غير صحيحة! حاول مرة ثانية 💖");
+  }
+}
+</script>
+
+</body>
+</html>
